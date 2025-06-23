@@ -1,0 +1,2041 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Standard Meta Tags -->
+    <meta name="description"
+        content="Join 600+ international talents from 40+ nationalities for networking, cultural exchange, and career connections. Topic: How to Find the Right Career/Venture Mentor">
+    <meta name="keywords"
+        content="international talent festival, amsterdam networking, career mentorship, cultural exchange, international students, food festival, professional networking, startup community, VU Amsterdam">
+    <meta name="author" content="International Talent & Food Festival">
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="19th International Talent & Food Festival | Amsterdam">
+    <meta property="og:description"
+        content="Join 600+ international talents from 40+ nationalities for networking, cultural exchange, and career connections. Topic: How to Find the Right Career/Venture Mentor">
+    <meta property="og:image" content="images/previeww.jpg">
+    <meta property="og:url" content="https://talentfoodfestival.netlify.app/">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="International Talent & Food Festival">
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="19th International Talent & Food Festival | Amsterdam">
+    <meta name="twitter:description"
+        content="Join 600+ international talents from 40+ nationalities for networking, cultural exchange, and career connections. Topic: How to Find the Right Career/Venture Mentor">
+    <meta name="twitter:image" content="https://talentfoodfestival.netlify.app/previeww.jpg">
+    <title>19th International Talent & Food Festival | Amsterdam</title>
+
+    <!-- 
+    IMPORTANT: Replace the SVG data URLs in the logo img tags with your actual logo image.
+    Look for src="data:image/svg+xml..." and replace with src="path/to/your/logo.png"
+    The logo appears in two places: navigation bar and hero section.
+    -->
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #3D7A7B;
+            --secondary: #C4A962;
+            --accent: #E07A5F;
+            --green: #7B9E63;
+            --dark: #2D3436;
+            --light: #F8F9FA;
+            --gradient: linear-gradient(135deg, #3D7A7B 0%, #C4A962 100%);
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: var(--dark);
+            overflow-x: hidden;
+        }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+            transition: all 0.3s ease;
+        }
+
+        nav.scrolled {
+            padding: 0.5rem 0;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+        }
+
+        .logo {
+            height: 50px;
+            width: 50px;
+        }
+
+        .logo img {
+            height: 100%;
+            width: 100%;
+            object-fit: contain;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--dark);
+            font-weight: 500;
+            transition: color 0.3s ease;
+            position: relative;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--primary);
+            transition: width 0.3s ease;
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .mobile-menu {
+            display: none;
+            flex-direction: column;
+            gap: 4px;
+            cursor: pointer;
+        }
+
+        .mobile-menu span {
+            width: 25px;
+            height: 3px;
+            background: var(--dark);
+            transition: all 0.3s ease;
+        }
+
+        /* Hero Section - Increased height */
+        .hero {
+            margin-top: 80px;
+            min-height: 100vh;
+            padding-bottom: 4rem;
+            background: linear-gradient(135deg, #3D7A7B 0%, #C4A962 50%, #E07A5F 100%);
+            position: relative;
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="%23ffffff" fill-opacity="0.1" d="M0,96L48,112C96,128,192,160,288,160C384,160,480,128,576,122.7C672,117,768,139,864,154.7C960,171,1056,181,1152,165.3C1248,149,1344,107,1392,85.3L1440,64L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>') no-repeat bottom;
+            background-size: cover;
+        }
+
+        .hero-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            color: white;
+        }
+
+        .hero-logo {
+            width: 120px;
+            height: 120px;
+            margin: 0 auto 2rem;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 50%;
+            padding: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            animation: fadeInUp 0.8s ease;
+        }
+
+        .hero-logo img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+
+        .hero h1 {
+            font-size: clamp(2.5rem, 5vw, 3rem);
+            margin-bottom: 1rem;
+            animation: fadeInUp 1s ease;
+        }
+
+        .hero .tagline {
+            font-size: clamp(1.2rem, 3vw, 1.8rem);
+            margin-bottom: 2rem;
+            opacity: 0.9;
+            animation: fadeInUp 1s ease 0.2s both;
+        }
+
+        .event-info {
+            display: flex;
+            gap: 2rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: 2rem;
+            animation: fadeInUp 1s ease 0.4s both;
+        }
+
+        .event-info-item {
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .event-info-item a {
+            color: white;
+            text-decoration: none;
+            border-bottom: 1px dotted rgba(255, 255, 255, 0.5);
+            transition: border-bottom-color 0.3s ease;
+        }
+
+        .event-info-item a:hover {
+            border-bottom-color: white;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 1rem 3rem;
+            background: white;
+            color: var(--dark);
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: bold;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            animation: fadeInUp 1s ease 0.6s both;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Floating Elements */
+        .floating-food {
+            position: absolute;
+            font-size: 3rem;
+            animation: float 6s ease-in-out infinite;
+            opacity: 0.3;
+        }
+
+        .floating-food:nth-child(1) {
+            top: 20%;
+            left: 10%;
+            animation-delay: 0s;
+        }
+
+        .floating-food:nth-child(2) {
+            top: 60%;
+            right: 10%;
+            animation-delay: 2s;
+        }
+
+        .floating-food:nth-child(3) {
+            bottom: 20%;
+            left: 20%;
+            animation-delay: 4s;
+        }
+
+        .floating-food:nth-child(4) {
+            top: 40%;
+            right: 30%;
+            animation-delay: 1s;
+        }
+
+        @keyframes float {
+
+            0%,
+            100% {
+                transform: translateY(0) rotate(0deg);
+            }
+
+            50% {
+                transform: translateY(-20px) rotate(10deg);
+            }
+        }
+
+        /* Community Section */
+        .community {
+            padding: 5rem 2rem;
+            background: var(--light);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: clamp(2rem, 4vw, 3rem);
+            margin-bottom: 3rem;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 4px;
+            background: var(--gradient);
+            border-radius: 2px;
+        }
+
+        .community-content {
+            max-width: 900px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .community-item {
+            background: white;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .community-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+        }
+
+        .community-item h3 {
+            color: var(--primary);
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+
+
+        /* Why Attend Section */
+        .why-attend {
+            padding: 6rem 2rem;
+            background: var(--light);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .why-attend::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none" opacity="0.03"><path d="M0,0 L100,0 L100,100 L0,100 Z" fill="%2320B2AA"/></svg>');
+            background-size: 200px;
+            opacity: 0.05;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: clamp(2rem, 4vw, 3rem);
+            margin-bottom: 3.5rem;
+            position: relative;
+            color: var(--dark);
+            font-weight: 700;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: linear-gradient(to right, var(--primary), var(--secondary));
+            border-radius: 2px;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2.5rem;
+            margin-bottom: 3rem;
+        }
+
+        .stat-tile {
+            padding: 2.5rem 1.5rem;
+            border-radius: 16px;
+            color: white;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+        }
+
+        .stat-tile::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: inherit;
+            opacity: 0.9;
+            z-index: -1;
+        }
+
+        .stat-tile::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0) 100%);
+            z-index: -1;
+        }
+
+        .stat-tile:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+        }
+
+        .stat-tile i {
+            font-size: 2.8rem;
+            margin-bottom: 1.5rem;
+            display: inline-block;
+            transition: transform 0.3s ease;
+        }
+
+        .stat-tile:hover i {
+            transform: scale(1.1);
+        }
+
+        .stat-tile h3 {
+            font-size: 2.8rem;
+            margin-bottom: 0.5rem;
+            font-weight: 700;
+            line-height: 1;
+        }
+
+        .stat-tile p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            font-weight: 500;
+        }
+
+
+        /* REDESIGNED LOOKING FOR SECTION */
+        .looking-for-section {
+            position: relative;
+            margin-top: 3rem;
+            overflow: hidden;
+        }
+
+        .looking-for-section::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background:
+                radial-gradient(circle at 20% 50%, rgba(61, 122, 123, 0.03) 0%, transparent 50%),
+                radial-gradient(circle at 80% 80%, rgba(196, 169, 98, 0.03) 0%, transparent 50%),
+                radial-gradient(circle at 40% 20%, rgba(224, 122, 95, 0.02) 0%, transparent 50%);
+            animation: float-bg 20s ease-in-out infinite;
+        }
+
+        @keyframes float-bg {
+
+            0%,
+            100% {
+                transform: translate(0, 0) rotate(0deg);
+            }
+
+            50% {
+                transform: translate(-30px, -20px) rotate(1deg);
+            }
+        }
+
+        .looking-for-card {
+            background: white;
+            border-radius: 20px;
+            padding: 3rem;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+            position: relative;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .looking-for-card:hover {
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.12);
+            transform: translateY(-2px);
+        }
+
+        .looking-for-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: var(--gradient);
+        }
+
+        .decoration-element {
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            background: var(--gradient);
+            border-radius: 50%;
+            opacity: 0.1;
+            filter: blur(40px);
+            animation: float 6s ease-in-out infinite;
+        }
+
+        .decoration-element:nth-child(1) {
+            top: -50px;
+            right: -50px;
+            animation-delay: 0s;
+        }
+
+        .decoration-element:nth-child(2) {
+            bottom: -50px;
+            left: -50px;
+            animation-delay: 3s;
+        }
+
+        .looking-for-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .looking-for-header h3 {
+            font-size: 2rem;
+            color: var(--dark);
+            margin-bottom: 0.5rem;
+            position: relative;
+            display: inline-block;
+        }
+
+        .looking-for-header h3::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 3px;
+            background: var(--gradient);
+            border-radius: 2px;
+        }
+
+        .options-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 3rem;
+        }
+
+        .option-card {
+            background: var(--light);
+            border: 2px solid transparent;
+            border-radius: 15px;
+            padding: 1.5rem;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .option-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: var(--gradient);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .option-card:hover {
+            border-color: var(--primary);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(61, 122, 123, 0.15);
+        }
+
+        .option-card:hover::before {
+            opacity: 0.03;
+        }
+
+        .option-content {
+            position: relative;
+            z-index: 1;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .option-icon {
+            width: 50px;
+            height: 50px;
+            background: var(--gradient);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            color: white;
+            flex-shrink: 0;
+            transition: all 0.3s ease;
+        }
+
+        .option-card:hover .option-icon {
+            transform: scale(1.1) rotate(5deg);
+        }
+
+        .option-text {
+            flex: 1;
+        }
+
+        .option-text h4 {
+            color: var(--dark);
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 0.2rem;
+        }
+
+        .option-text p {
+            color: #666;
+            font-size: 0.9rem;
+            margin: 0;
+        }
+
+        .cta-section {
+            text-align: center;
+            position: relative;
+        }
+
+        .cta-message {
+            font-size: 1.5rem;
+            font-weight: bold;
+            background: var(--gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 2rem;
+            position: relative;
+            display: inline-block;
+        }
+
+        .emphasis-stars {
+            position: absolute;
+            font-size: 1.2rem;
+            color: var(--secondary);
+            animation: twinkle 2s ease-in-out infinite;
+        }
+
+        .emphasis-stars:nth-child(1) {
+            top: -10px;
+            left: -20px;
+            animation-delay: 0s;
+        }
+
+        .emphasis-stars:nth-child(2) {
+            top: -10px;
+            right: -20px;
+            animation-delay: 0.5s;
+        }
+
+        .emphasis-stars:nth-child(3) {
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            animation-delay: 1s;
+        }
+
+        @keyframes twinkle {
+
+            0%,
+            100% {
+                opacity: 0.3;
+                transform: scale(1);
+            }
+
+            50% {
+                opacity: 1;
+                transform: scale(1.2);
+            }
+        }
+
+        /* Culture Section */
+        .culture {
+            padding: 5rem 2rem;
+            background: #ffffff;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .culture::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, rgba(61, 122, 123, 0.05) 0%, rgba(196, 169, 98, 0.05) 100%);
+            z-index: 0;
+        }
+
+        .culture .container {
+            position: relative;
+            z-index: 1;
+        }
+
+        .labels-grid {
+            display: flex;
+            justify-content: center;
+            align-items: stretch;
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            flex-wrap: wrap;
+        }
+
+        .label-card {
+            background: white;
+            border: 1px solid rgba(61, 122, 123, 0.2);
+            padding: 2rem;
+            border-radius: 15px;
+            text-align: center;
+            transition: all 0.3s ease;
+            flex: 1;
+            min-width: 250px;
+            max-width: 300px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+        }
+
+        .label-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(61, 122, 123, 0.15);
+            border-color: var(--primary);
+        }
+
+        .label-card h3 {
+            color: var(--dark);
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+        }
+
+        .label-card p {
+            color: #666;
+            font-size: 0.95rem;
+        }
+
+        .label-card i {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        /* Proof Section */
+        .proof {
+            padding: 5rem 2rem;
+            background: var(--light);
+        }
+
+        .proof-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .proof-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .proof-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+        }
+
+        .proof-card h3 {
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+
+        .proof-card ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .proof-card li {
+            padding: 0.5rem 0;
+            border-bottom: 1px solid #eee;
+        }
+
+        .proof-card li:last-child {
+            border-bottom: none;
+        }
+
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .stat-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 20px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .stat-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+        }
+
+        .stat-number {
+            font-size: 3rem;
+            font-weight: bold;
+            background: var(--gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .stat-label {
+            font-size: 1.1rem;
+            color: #666;
+            margin-top: 0.5rem;
+        }
+
+        /* Photo Gallery Section */
+        .gallery {
+            padding: 5rem 2rem;
+            background: white;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+            transition: all 0.3s ease;
+            aspect-ratio: 1;
+        }
+
+        .gallery-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.05);
+        }
+
+        .gallery-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+            color: white;
+            padding: 1.5rem;
+            transform: translateY(100%);
+            transition: transform 0.3s ease;
+        }
+
+        .gallery-item:hover .gallery-overlay {
+            transform: translateY(0);
+        }
+
+        /* Lightbox */
+        .lightbox {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.9);
+            z-index: 2000;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem;
+        }
+
+        .lightbox.active {
+            display: flex;
+        }
+
+        .lightbox-content {
+            max-width: 90%;
+            max-height: 90%;
+            position: relative;
+        }
+
+        .lightbox-content img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+
+        .lightbox-close {
+            position: absolute;
+            top: -40px;
+            right: -40px;
+            color: white;
+            font-size: 2rem;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .lightbox-close:hover {
+            transform: rotate(90deg);
+        }
+
+        /* Who Section */
+        .who {
+            padding: 5rem 2rem;
+        }
+
+        .demo-content {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .demo-chart {
+            background: white;
+            padding: 2rem;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            margin-bottom: 2rem;
+        }
+
+        .chart-bar {
+            margin-bottom: 1.5rem;
+        }
+
+        .chart-label {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+        }
+
+        .chart-progress {
+            height: 30px;
+            background: #f0f0f0;
+            border-radius: 15px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .chart-fill {
+            height: 100%;
+            background: var(--gradient);
+            border-radius: 15px;
+            transition: width 2s ease;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            padding-right: 1rem;
+            color: white;
+            font-weight: bold;
+        }
+
+        .partner-logos {
+            margin-top: 2rem;
+            text-align: center;
+        }
+
+        .partner-logos h4 {
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+
+        /* Schedule Section */
+        .schedule {
+            padding: 5rem 2rem;
+            background: var(--light);
+        }
+
+        .schedule-flow {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            flex-wrap: wrap;
+            gap: 2rem;
+        }
+
+        .schedule-item {
+            flex: 1;
+            min-width: 200px;
+            text-align: center;
+            position: relative;
+        }
+
+        .schedule-time {
+            background: var(--primary);
+            color: white;
+            padding: 1rem;
+            border-radius: 50px;
+            font-weight: bold;
+            margin-bottom: 1rem;
+            display: inline-block;
+        }
+
+        .schedule-item:not(:last-child)::after {
+            content: '→';
+            position: absolute;
+            right: -20px;
+            top: 30px;
+            font-size: 2rem;
+            color: var(--primary);
+        }
+
+        /* Pricing Section - Updated Layout */
+        .pricing {
+            padding: 5rem 2rem;
+        }
+
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .pricing-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 20px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .pricing-card.featured {
+            transform: scale(1.05);
+            border: 3px solid var(--primary);
+        }
+
+        .pricing-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+        }
+
+        .pricing-card.featured:hover {
+            transform: scale(1.05) translateY(-10px);
+        }
+
+        .pricing-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 5px;
+            background: var(--gradient);
+        }
+
+        .pricing-badge {
+            position: absolute;
+            top: 10px;
+            right: -30px;
+            background: var(--accent);
+            color: white;
+            padding: 0.5rem 2rem 0.5rem 3rem;
+            transform: rotate(45deg);
+            font-size: 0.8rem;
+            font-weight: bold;
+        }
+
+        .price {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: var(--primary);
+            margin: 3rem 0 1rem;
+        }
+
+        .pricing-details {
+            font-size: 0.9rem;
+            color: #666;
+            margin-bottom: 1.5rem;
+        }
+
+        /* Contact Section */
+        .contact {
+            padding: 5rem 2rem;
+            background: var(--dark);
+            color: white;
+            text-align: center;
+        }
+
+        .contact-info {
+            margin-top: 2rem;
+            font-size: 1.2rem;
+        }
+
+        .contact-info a {
+            color: var(--accent);
+            text-decoration: none;
+        }
+
+        /* Footer */
+        footer {
+            background: #1a1a1a;
+            color: white;
+            text-align: center;
+            padding: 2rem;
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .scroll-animate {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s ease;
+        }
+
+        .scroll-animate.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .labels-grid {
+                justify-content: center;
+            }
+
+            .label-card {
+                max-width: 45%;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: white;
+                flex-direction: column;
+                padding: 2rem;
+                box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+                gap: 1rem;
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .mobile-menu {
+                display: flex;
+            }
+
+            .logo {
+                height: 40px;
+                width: 40px;
+            }
+
+            .hero {
+                min-height: auto;
+                padding: 4rem 0;
+            }
+
+            .hero-logo {
+                width: 100px;
+                height: 100px;
+                padding: 15px;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .event-info {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .event-info-item {
+                padding: 0.8rem 1.5rem;
+                font-size: 0.9rem;
+            }
+
+            .looking-for-card {
+                padding: 2rem 1.5rem;
+            }
+
+            .looking-for-header h3 {
+                font-size: 1.8rem;
+            }
+
+            .options-grid {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+
+            .cta-message {
+                font-size: 1.3rem;
+            }
+
+            .timeline::before {
+                left: 30px;
+            }
+
+            .timeline-item {
+                flex-direction: column !important;
+                align-items: flex-start !important;
+            }
+
+            .timeline-content {
+                width: calc(100% - 60px);
+                margin-left: 60px;
+            }
+
+            .timeline-dot {
+                left: 30px;
+            }
+
+            .schedule-flow {
+                flex-direction: column;
+            }
+
+            .schedule-item::after {
+                display: none;
+            }
+
+            /* Pricing Grid - Mobile */
+            .pricing-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .pricing-card.featured {
+                transform: scale(1);
+            }
+
+            .demo-content {
+                grid-template-columns: 1fr;
+            }
+
+            /* Gallery Grid - Mobile */
+            .gallery-grid {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+
+            /* Culture Cards - Mobile */
+            .labels-grid {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .label-card {
+                max-width: 100%;
+                width: 100%;
+            }
+
+            .floating-food {
+                font-size: 2rem;
+            }
+
+            .cta-button {
+                padding: 0.8rem 2rem;
+                font-size: 1rem;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .stat-number {
+                font-size: 2.5rem;
+            }
+
+            .price {
+                font-size: 2rem;
+            }
+
+            .lightbox-close {
+                top: 10px;
+                right: 10px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .nav-container {
+                padding: 1rem;
+            }
+
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+
+            .hero .tagline {
+                font-size: 1rem;
+            }
+
+            .event-info-item {
+                width: 100%;
+                justify-content: center;
+            }
+
+            .proof-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .stats {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 1rem;
+            }
+
+            .stat-card {
+                padding: 1.5rem 1rem;
+            }
+
+            .pricing-badge {
+                padding: 0.4rem 1.5rem;
+                font-size: 0.7rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav id="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <!-- Replace the src with your actual logo image -->
+                <img src="images/logo-no-bg.png" alt="International Talent & Food Festival Logo">
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <!-- <li><a href="#community">Community</a></li> -->
+                <!-- <li><a href="#mission">Mission</a></li> -->
+                <li><a href="#proof">Events</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#who">Members</a></li>
+                <!-- <li><a href="#culture">Culture</a></li> -->
+                <li><a href="#schedule">Schedule</a></li>
+                <li><a href="#pricing">Pricing</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="mobile-menu" id="mobile-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="floating-food" style="animation-delay: 0s;">🍔</div>
+        <div class="floating-food" style="animation-delay: 1.5s;">👔</div>
+        <div class="floating-food" style="animation-delay: 3s;">🍣</div>
+        <div class="floating-food" style="animation-delay: 4.5s;">🥼</div>
+        <div class="floating-food" style="animation-delay: 6s;">🍝</div>
+
+        <div class="hero-content">
+            <!-- <div class="hero-logo">
+                <img src="./logo-no-bg-big.png" alt="International Talent & Food Festival Logo">
+            </div> -->
+            <h1> 20th International talent & Food Festival</h1>
+            <p class="tagline">To be an entrepreneur or corporate professional (startup VS corporate)
+            </p>
+            <p class="tagline">Topic: How to Find the Right Career/Venture Mentor</p>
+            <!-- <p class="tagline">The largest international student community in the Netherlands</p> -->
+
+            <div class="event-info">
+                <div class="event-info-item">
+                    <span>📅</span>
+                    <span>Friday, July 11th</span>
+                </div>
+                <div class="event-info-item">
+                    <span>⏰</span>
+                    <span>6:00 PM - 10:00 PM</span>
+                </div>
+                <div class="event-info-item">
+                    <span>📍</span>
+                    <span><a href="https://maps.app.goo.gl/cNX9o3kSE1puS9ZZ9" target="_blank"
+                            rel="noopener noreferrer">VU Amsterdam</a></span>
+                </div>
+            </div>
+
+            <a href="https://forms.gle/kxJuKJ2tDcjbdWFf6" class="cta-button">Register Now</a>
+        </div>
+    </section>
+
+    <!-- What is our community about? Section -->
+    <section class="community" id="community">
+        <div class="container">
+            <!-- <h2 class="section-title scroll-animate">What is Our Community About?</h2> -->
+
+            <div class="community-content">
+                <!-- REDESIGNED LOOKING FOR SECTION -->
+                <div class="looking-for-section scroll-animate">
+                    <div class="looking-for-card">
+                        <!-- Floating decorations -->
+                        <div class="decoration-element"></div>
+                        <div class="decoration-element"></div>
+
+                        <!-- Header -->
+                        <div class="looking-for-header">
+                            <h3>Are You Looking For...</h3>
+                        </div>
+
+                        <!-- Options Grid -->
+                        <div class="options-grid">
+                            <div class="option-card" style="opacity: 0; transform: translateY(20px); transition: 0.6s;">
+                                <div class="option-content">
+                                    <div class="option-icon">🚀</div>
+                                    <div class="option-text">
+                                        <h4>A Startup Mentor?</h4>
+                                        <p>Connect with experienced entrepreneurs</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="option-card" style="opacity: 0; transform: translateY(20px); transition: 0.6s;">
+                                <div class="option-content">
+                                    <div class="option-icon">💼</div>
+                                    <div class="option-text">
+                                        <h4>Career Opportunities?</h4>
+                                        <p>Discover your next professional move</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="option-card" style="opacity: 0; transform: translateY(20px); transition: 0.6s;">
+                                <div class="option-content">
+                                    <div class="option-icon">💡</div>
+                                    <div class="option-text">
+                                        <h4>Fresh Perspectives?</h4>
+                                        <p>Young voices with innovative ideas</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="option-card" style="opacity: 0; transform: translateY(20px); transition: 0.6s;">
+                                <div class="option-content">
+                                    <div class="option-icon">🤝</div>
+                                    <div class="option-text">
+                                        <h4>Industry Professionals?</h4>
+                                        <p>Network across different sectors</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- CTA Section -->
+                        <div class="cta-section">
+                            <div class="cta-message">
+                                <span class="emphasis-stars">✨</span>
+                                <span class="emphasis-stars">✨</span>
+                                <span class="emphasis-stars">✨</span>
+                                You are in the right place!
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Culture/Labels Section -->
+    <!-- <section class="culture" id="culture">
+        <div class="container">
+            <h2 class="section-title scroll-animate">What To Expect</h2>
+
+            <div class="labels-grid">
+                <div class="label-card scroll-animate">
+                    <h3>🎯 Informal Career Event</h3>
+                    <p>Professional growth in a relaxed setting</p>
+                </div>
+
+                <div class="label-card scroll-animate">
+                    <h3>🌍 International Vibe</h3>
+                    <p>40+ nationalities under one roof</p>
+                </div>
+
+                <div class="label-card scroll-animate">
+                    <h3>💬 Deep Conversations</h3>
+                    <p>Meaningful discussions and learning</p>
+                </div>
+
+                <div class="label-card scroll-animate">
+                    <h3>🤝 Networking & Friendship</h3>
+                    <p>Build professional and personal connections</p>
+                </div>
+            </div>
+
+            <p style="text-align: center; margin-top: 3rem; font-size: 1.2rem; color: var(--primary); font-weight: 500;"
+                class="scroll-animate">
+                👔 Casual dress code - Come as you are!
+            </p>
+        </div>
+    </section> -->
+
+
+       <!-- Why Attend Section -->
+    <section class="why-attend" id="why-attend">
+        <div class="container">
+            <h2 class="section-title">Why Attend Our Events?</h2>
+
+            <div class="stats-grid">
+                <div class="stat-tile" style="background-color: var(--primary);">
+                    <i>🤝</i>
+                    <h3>90.9%</h3>
+                    <p>For Networking Opportunities</p>
+                </div>
+
+                <div class="stat-tile" style="background-color: var(--secondary);">
+                    <i>🌍</i>
+                    <h3>74.5%</h3>
+                    <p>For International Community Vibe</p>
+                </div>
+
+                <div class="stat-tile" style="background-color: var(--accent);">
+                    <i>💼</i>
+                    <h3>41.8%</h3>
+                    <p>For Future Career Opportunities</p>
+                </div>
+
+                <div class="stat-tile" style="background-color: var(--primary); color: var(--dark);">
+                    <i>🧠</i>
+                    <h3>45.5%</h3>
+                    <p>For Topic Knowledge</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Proof of Successful Events Section -->
+    <section class="proof" id="proof">
+        <div class="container">
+            <h2 class="section-title scroll-animate">Proof of Successful Events</h2>
+
+            <div class="stats">
+                <div class="stat-card scroll-animate">
+                    <div class="stat-number">19</div>
+                    <div class="stat-label">Events</div>
+                </div>
+                <div class="stat-card scroll-animate">
+                    <div class="stat-number">50-100</div>
+                    <div class="stat-label">Attendees/Event</div>
+                </div>
+                <div class="stat-card scroll-animate">
+                    <div class="stat-number">650+</div>
+                    <div class="stat-label">Attendees in Total</div>
+                </div>
+                <div class="stat-card scroll-animate">
+                    <div class="stat-number">40+</div>
+                    <div class="stat-label">Nationalities</div>
+                </div>
+            </div>
+
+            <div class="proof-grid">
+                <div class="proof-card scroll-animate">
+                    <h3>Previous Table Topics</h3>
+                    <ul>
+                        <li>How to build your personal branding for your Career</li>
+                        <li>To be an entrepreneur or a corporate professional?</li>
+                        <li>How to step into international careers</li>
+                        <li>Current job market in the Netherlands</li>
+                        <li>How to become more empathetic</li>
+                        <li>Quality of university education</li>
+                        <li>Culture shock in the Netherlands</li>
+                        <li>Top 3 issues in your home country</li>
+                        <li>And many others!</li>
+                    </ul>
+                </div>
+
+                <div class="proof-card scroll-animate">
+                    <h3>Previous Group Leads</h3>
+                    <ul>
+                        <li><strong>Julita</strong> - Performance Director at Philips</li>
+                        <li><strong>Chantal</strong> - Head of European Investment Bank</li>
+                        <li><strong>Anne</strong> - Executive Talent Acquisition at Rabobank</li>
+                        <li><strong>Colleen</strong> - Director of International Recruiting in SentinelOne</li>
+                        <li><strong>Amir</strong> - Senior Consultant at Capgemini</li>
+                        <li><strong>Lounas</strong> - Sales Director at TOPS Consult</li>
+                        <li><strong>Washant</strong> - Founder of Naice.AI</li>
+                        <li><strong>Harry</strong> - Founder of China Consulent</li>
+                        <li><strong>Maria</strong> - Founder of Holland Alumni Network</li>
+                        <li><strong>Maarten</strong> - Partner at Prow Capital</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Photo Gallery Section -->
+    <section class="gallery" id="gallery">
+        <div class="container">
+            <h2 class="section-title scroll-animate">Festival Gallery</h2>
+
+            <div class="gallery-grid">
+
+                <div class="gallery-item scroll-animate" onclick="openLightbox(this)">
+                    <img src="images/1.jpg" alt="International food table display at festival">
+                    <div class="gallery-overlay">
+                        <!-- <h4>Career Workshops</h4> -->
+                        <!-- <p>Professional development sessions</p> -->
+                    </div>
+                </div>
+
+                <div class="gallery-item scroll-animate" onclick="openLightbox(this)">
+                    <img src="images/1.JPEG" alt="International food table display at festival">
+                    <div class="gallery-overlay">
+                        <!-- <h4>Networking in Action</h4> -->
+                        <!-- <p>Building connections across cultures</p> -->
+                    </div>
+                </div>
+
+                <div class="gallery-item scroll-animate" onclick="openLightbox(this)">
+                    <img src="images/5.JPEG" alt="International food table display at festival">
+                    <div class="gallery-overlay">
+                        <!-- <h4>Cultural Showcase</h4> -->
+                        <!-- <p>Celebrating diversity through performances</p> -->
+                    </div>
+                </div>
+
+                <div class="gallery-item scroll-animate" onclick="openLightbox(this)">
+                    <img src="images/4.jpg" alt="International food table display at festival">
+                    <div class="gallery-overlay">
+                        <!-- <h4>Startup Presentations</h4> -->
+                        <!-- <p>Entrepreneurs sharing their vision</p> -->
+                    </div>
+                </div>
+
+                <div class="gallery-item scroll-animate" onclick="openLightbox(this)">
+                    <img src="images/11.JPEG" alt="International food table display at festival">
+                    <div class="gallery-overlay">
+                        <!-- <h4>International Food Table</h4> -->
+                        <!-- <p>Diverse culinary experiences from around the world</p> -->
+                    </div>
+                </div>
+
+                <div class="gallery-item scroll-animate" onclick="openLightbox(this)">
+                    <img src="images/14.JPEG" alt="International food table display at festival">
+                    <div class="gallery-overlay">
+                        <!-- <h4>International Food Table</h4> -->
+                        <!-- <p>Diverse culinary experiences from around the world</p> -->
+                    </div>
+                </div>
+
+                <div class="gallery-item scroll-animate" onclick="openLightbox(this)">
+                    <img src="images/new1.jfif" alt="International food table display at festival">
+                    <div class="gallery-overlay">
+                        <!-- <h4>International Food Table</h4> -->
+                        <!-- <p>Diverse culinary experiences from around the world</p> -->
+                    </div>
+                </div>
+
+                <div class="gallery-item scroll-animate" onclick="openLightbox(this)">
+                    <img src="images/new2.webp" alt="International food table display at festival">
+                    <div class="gallery-overlay">
+                        <!-- <h4>International Food Table</h4> -->
+                        <!-- <p>Diverse culinary experiences from around the world</p> -->
+                    </div>
+                </div>
+
+                <div class="gallery-item scroll-animate" onclick="openLightbox(this)">
+                    <img src="images/4.JPEG" alt="International food table display at festival">
+                    <div class="gallery-overlay">
+                        <!-- <h4>Team Building Activities</h4> -->
+                        <!-- <p>Collaborative experiences and fun</p> -->
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox" onclick="closeLightbox()">
+        <div class="lightbox-content">
+            <span class="lightbox-close">×</span>
+            <img id="lightbox-img" src="" alt="">
+        </div>
+    </div>
+
+    <!-- Who is part of our community? Section -->
+    <section class="who" id="who">
+        <div class="container">
+            <h2 class="section-title scroll-animate">Who are Our Community Members?</h2>
+
+            <div class="demo-content">
+                <div class="highlight-box scroll-animate" style="margin-top: 3rem;">
+                    <h2>Really open-minded with an international mindset and deep appreciation</h2>
+                </div>
+
+                <div class="demo-chart scroll-animate">
+                    <div class="chart-bar">
+                        <div class="chart-label">
+                            <span>Students/Graduates</span>
+                            <span>50%</span>
+                        </div>
+                        <div class="chart-progress">
+                            <div class="chart-fill" style="width: 0;" data-width="50%"></div>
+                        </div>
+                    </div>
+                    <div class="chart-bar">
+                        <div class="chart-label">
+                            <span>Industry Professionals</span>
+                            <span>30%</span>
+                        </div>
+                        <div class="chart-progress">
+                            <div class="chart-fill" style="width: 0;" data-width="30%"></div>
+                        </div>
+                    </div>
+                    <div class="chart-bar">
+                        <div class="chart-label">
+                            <span>Entrepereneurs/VCs/Startup Incubators</span>
+                            <span>20%</span>
+                        </div>
+                        <div class="chart-progress">
+                            <div class="chart-fill" style="width: 0;" data-width="20%"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="partner-logos scroll-animate">
+                    <h4>Universities (13+)</h4>
+                    <p>VU, UvA, RUG, TIAS, TU Delft, RSM, NBU, LEI, HvA, and more</p>
+
+                    <h4 style="margin-top: 2rem;">Startup Communities</h4>
+                    <p>Startup Village Amsterdam, VU StartHub, Demonstrator Lab Amsterdam, ASIF Ventures, Venture Centre
+                        HvA, Tech Makers</p>
+
+                    <h4 style="margin-top: 2rem;">Corporate Representatives</h4>
+                    <p>ASML, J.P. Morgan, European Investment Bank, Rabobank, Accenture, KPMG, Deloitte, Booking.com,
+                        Cargill, Philips, JD, IBM</p>
+                </div>
+
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Event Agenda Section -->
+    <section class="schedule" id="schedule">
+        <div class="container">
+            <h2 class="section-title scroll-animate">Event Agenda</h2>
+
+            <div class="schedule-flow">
+                <div class="schedule-item scroll-animate">
+                    <div class="schedule-time">6:00 PM - 6:15 PM</div>
+                    <h3>Walk-in</h3>
+                    <p>Registration and initial networking</p>
+                </div>
+
+                <div class="schedule-item scroll-animate">
+                    <div class="schedule-time">6:15 PM - 7:30 PM</div>
+                    <h3>Dining</h3>
+                    <p>International food experience</p>
+                </div>
+
+                <div class="schedule-item scroll-animate">
+                    <div class="schedule-time">7:30 PM - 9:00 PM</div>
+                    <h3>Table Topic</h3>
+                    <p>Group discussions and sharing</p>
+                </div>
+
+                <div class="schedule-item scroll-animate">
+                    <div class="schedule-time">9:00 PM - 10:00 PM</div>
+                    <h3>Networking</h3>
+                    <p>Free-flow connections</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="pricing" id="pricing">
+        <div class="container">
+            <h2 class="section-title scroll-animate">Event Pricing</h2>
+
+            <div class="pricing-grid">
+                <!-- Early Bird with Food -->
+                <div class="pricing-card scroll-animate">
+                    <div class="pricing-badge">Early Bird</div>
+                    <h3>Food Share</h3>
+                    <div class="price">€11.50</div>
+                    <div class="pricing-details">
+                        June 24th - 30 June<br>
+                        Bring dishes or dessert
+                    </div>
+                </div>
+
+                <!-- Early Bird without Food -->
+                <div class="pricing-card featured scroll-animate">
+                    <div class="pricing-badge">Early Bird</div>
+                    <h3>Just Come</h3>
+                    <div class="price">€19.50</div>
+                    <div class="pricing-details">
+                        June 24th - 30 June<br>
+                        No food contribution
+                    </div>
+                </div>
+
+                <!-- Regular with Food -->
+                <div class="pricing-card scroll-animate">
+                    <h3>Food Share</h3>
+                    <div class="price">€17.50</div>
+                    <div class="pricing-details">
+                        July 1st - July 8th<br>
+                        Bring dishes or dessert
+                    </div>
+                </div>
+
+                <!-- Regular without Food -->
+                <div class="pricing-card scroll-animate">
+                    <h3>Just Come</h3>
+                    <div class="price">€25.50</div>
+                    <div class="pricing-details">
+                        July 1st - July 8th<br>
+                        No food contribution
+                    </div>
+                </div>
+            </div>
+
+            <p style="text-align: center; margin-top: 2rem; color: #666;">
+                ⚠️ Payment must be completed before July 8th • Non-refundable policy applies
+            </p>
+        </div>
+    </section>
+
+    <!-- Contact/Registration Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <h2 class="section-title scroll-animate" style="color: white;">Event Registration</h2>
+            <div class="contact-info scroll-animate">
+                <p>Questions? Contact Bruce Li</p>
+                <p>WhatsApp: <a href="tel:+31613317858">+31 6 1331 7858</a></p>
+                <p>Linkedin: <a href="new.html">qiangbin-li</a></p>
+            </div>
+            
+            <div id="register" style="margin-top: 3rem;">
+                <a href="https://forms.gle/kxJuKJ2tDcjbdWFf6" class="cta-button" style="background: white; color: var(--dark);">
+                 Register for 11 July
+                </a>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2025 International Talent & Food Festival.</p>
+    </footer>
+
+    <script>
+        // Smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Navbar scroll effect
+        window.addEventListener('scroll', () => {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // Scroll animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+
+                    // Animate chart bars
+                    if (entry.target.classList.contains('demo-chart')) {
+                        const bars = entry.target.querySelectorAll('.chart-fill');
+                        bars.forEach(bar => {
+                            setTimeout(() => {
+                                bar.style.width = bar.getAttribute('data-width');
+                            }, 300);
+                        });
+                    }
+
+                    // Animate option cards in the redesigned section
+                    if (entry.target.classList.contains('looking-for-section')) {
+                        const cards = entry.target.querySelectorAll('.option-card');
+                        cards.forEach((card, index) => {
+                            setTimeout(() => {
+                                card.style.opacity = '1';
+                                card.style.transform = 'translateY(0)';
+                            }, index * 100);
+                        });
+                    }
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.scroll-animate').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Setup option cards for animation
+        document.querySelectorAll('.option-card').forEach(card => {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(20px)';
+            card.style.transition = 'all 0.6s ease';
+        });
+
+        // Mobile menu toggle
+        const mobileMenu = document.getElementById('mobile-menu');
+        const navLinks = document.querySelector('.nav-links');
+
+        mobileMenu.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+
+        // Close mobile menu when clicking a link
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+            });
+        });
+
+        // Add floating animation to food emojis
+        document.querySelectorAll('.floating-food').forEach((food, index) => {
+            food.style.animationDelay = `${index * 1.5}s`;
+        });
+
+        // Lightbox functionality
+        function openLightbox(element) {
+            const lightbox = document.getElementById('lightbox');
+            const lightboxImg = document.getElementById('lightbox-img');
+            const img = element.querySelector('img');
+
+            lightboxImg.src = img.src;
+            lightboxImg.alt = img.alt;
+            lightbox.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeLightbox() {
+            const lightbox = document.getElementById('lightbox');
+            lightbox.classList.remove('active');
+            document.body.style.overflow = 'auto';
+        }
+
+        // Prevent closing lightbox when clicking on image
+        document.querySelector('.lightbox-content').addEventListener('click', (e) => {
+            e.stopPropagation();
+        });
+    </script>
+</body>
+
+</html>
