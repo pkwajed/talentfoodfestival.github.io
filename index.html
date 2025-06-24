@@ -352,6 +352,7 @@
 
 
         /* Why Attend Section */
+        /* Updated Why Attend Section */
         .why-attend {
             padding: 6rem 2rem;
             background: var(--light);
@@ -359,116 +360,77 @@
             overflow: hidden;
         }
 
-        .why-attend::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none" opacity="0.03"><path d="M0,0 L100,0 L100,100 L0,100 Z" fill="%2320B2AA"/></svg>');
-            background-size: 200px;
-            opacity: 0.05;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            position: relative;
-            z-index: 1;
-        }
-
-        .section-title {
-            text-align: center;
-            font-size: clamp(2rem, 4vw, 3rem);
-            margin-bottom: 3.5rem;
-            position: relative;
-            color: var(--dark);
-            font-weight: 700;
-        }
-
-        .section-title::after {
-            content: '';
-            position: absolute;
-            bottom: -15px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 80px;
-            height: 4px;
-            background: linear-gradient(to right, var(--primary), var(--secondary));
-            border-radius: 2px;
-        }
-
         .stats-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2.5rem;
-            margin-bottom: 3rem;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 2rem;
+            max-width: 1000px;
+            margin: 0 auto;
         }
 
         .stat-tile {
-            padding: 2.5rem 1.5rem;
-            border-radius: 16px;
-            color: white;
+            background: white;
+            border-radius: 30px;
+            padding: 2rem 1.5rem;
             text-align: center;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 5px 25px rgba(61, 122, 123, 0.08);
             transition: all 0.4s ease;
-            position: relative;
-            overflow: hidden;
-            z-index: 1;
-        }
-
-        .stat-tile::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: inherit;
-            opacity: 0.9;
-            z-index: -1;
-        }
-
-        .stat-tile::after {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0) 100%);
-            z-index: -1;
+            border: 1px solid rgba(61, 122, 123, 0.1);
         }
 
         .stat-tile:hover {
             transform: translateY(-8px);
-            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 15px 40px rgba(61, 122, 123, 0.12);
         }
 
-        .stat-tile i {
-            font-size: 2.8rem;
-            margin-bottom: 1.5rem;
+        .stat-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
             display: inline-block;
-            transition: transform 0.3s ease;
+            background: rgba(61, 122, 123, 0.1);
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+            transition: all 0.3s ease;
         }
 
-        .stat-tile:hover i {
+        .stat-tile:hover .stat-icon {
             transform: scale(1.1);
+            background: rgba(61, 122, 123, 0.15);
         }
 
-        .stat-tile h3 {
-            font-size: 2.8rem;
-            margin-bottom: 0.5rem;
+        .stat-percent {
+            font-size: 2.2rem;
             font-weight: 700;
-            line-height: 1;
+            margin-bottom: 0.5rem;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
 
-        .stat-tile p {
-            font-size: 1.1rem;
-            opacity: 0.9;
-            font-weight: 500;
+        .stat-label {
+            font-size: 1rem;
+            color: #555;
+            line-height: 1.4;
         }
+
+        @media (max-width: 768px) {
+            .stats-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .stats-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+
 
 
         /* REDESIGNED LOOKING FOR SECTION */
@@ -1433,10 +1395,10 @@
             <!-- <div class="hero-logo">
                 <img src="./logo-no-bg-big.png" alt="International Talent & Food Festival Logo">
             </div> -->
-            <h1> 20th International talent & Food Festival</h1>
-            <p class="tagline">To be an entrepreneur or corporate professional (startup VS corporate)
+            <h1> 20th International Talent & Food Festival</h1>
+            <p class="tagline">An international talent community for students, entrepreneurs, and industry professionals
             </p>
-            <p class="tagline">Topic: How to Find the Right Career/Venture Mentor</p>
+            <p class="tagline"> Topic: To be an entrepreneur or corporate professional (startup VS corporate)</p>
             <!-- <p class="tagline">The largest international student community in the Netherlands</p> -->
 
             <div class="event-info">
@@ -1570,34 +1532,42 @@
     </section> -->
 
 
-       <!-- Why Attend Section -->
+    <!-- Why Attend Section -->
     <section class="why-attend" id="why-attend">
         <div class="container">
-            <h2 class="section-title">Why Attend Our Events?</h2>
+            <h2 class="section-title scroll-animate">Why Attend Our Events?</h2>
 
             <div class="stats-grid">
-                <div class="stat-tile" style="background-color: var(--primary);">
-                    <i>🤝</i>
-                    <h3>90.9%</h3>
-                    <p>For Networking Opportunities</p>
+                <div class="stat-tile scroll-animate">
+                    <div class="stat-icon">🤝</div>
+                    <div class="stat-content">
+                        <div class="stat-percent">90.9%</div>
+                        <div class="stat-label">For Networking Opportunities</div>
+                    </div>
                 </div>
 
-                <div class="stat-tile" style="background-color: var(--secondary);">
-                    <i>🌍</i>
-                    <h3>74.5%</h3>
-                    <p>For International Community Vibe</p>
+                <div class="stat-tile scroll-animate">
+                    <div class="stat-icon">🌍</div>
+                    <div class="stat-content">
+                        <div class="stat-percent">74.5%</div>
+                        <div class="stat-label">For International Community Vibe</div>
+                    </div>
                 </div>
 
-                <div class="stat-tile" style="background-color: var(--accent);">
-                    <i>💼</i>
-                    <h3>41.8%</h3>
-                    <p>For Future Career Opportunities</p>
+                <div class="stat-tile scroll-animate">
+                    <div class="stat-icon">💼</div>
+                    <div class="stat-content">
+                        <div class="stat-percent">41.8%</div>
+                        <div class="stat-label">For Future Career Opportunities</div>
+                    </div>
                 </div>
 
-                <div class="stat-tile" style="background-color: var(--primary); color: var(--dark);">
-                    <i>🧠</i>
-                    <h3>45.5%</h3>
-                    <p>For Topic Knowledge</p>
+                <div class="stat-tile scroll-animate">
+                    <div class="stat-icon">🧠</div>
+                    <div class="stat-content">
+                        <div class="stat-percent">45.5%</div>
+                        <div class="stat-label">For Topic Knowledge</div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -1630,8 +1600,8 @@
                 <div class="proof-card scroll-animate">
                     <h3>Previous Table Topics</h3>
                     <ul>
-                        <li>How to build your personal branding for your Career</li>
-                        <li>To be an entrepreneur or a corporate professional?</li>
+                        <li>How to find the right career/venture mentorr</li>
+                        <li>How personal branding helps your career</li>
                         <li>How to step into international careers</li>
                         <li>Current job market in the Netherlands</li>
                         <li>How to become more empathetic</li>
@@ -1669,7 +1639,7 @@
             <div class="gallery-grid">
 
                 <div class="gallery-item scroll-animate" onclick="openLightbox(this)">
-                    <img src="images/1.jpg" alt="International food table display at festival">
+                    <img src="images/new1.png" alt="International food table display at festival">
                     <div class="gallery-overlay">
                         <!-- <h4>Career Workshops</h4> -->
                         <!-- <p>Professional development sessions</p> -->
@@ -1677,7 +1647,7 @@
                 </div>
 
                 <div class="gallery-item scroll-animate" onclick="openLightbox(this)">
-                    <img src="images/1.JPEG" alt="International food table display at festival">
+                    <img src="images/new2.png" alt="International food table display at festival">
                     <div class="gallery-overlay">
                         <!-- <h4>Networking in Action</h4> -->
                         <!-- <p>Building connections across cultures</p> -->
@@ -1685,60 +1655,13 @@
                 </div>
 
                 <div class="gallery-item scroll-animate" onclick="openLightbox(this)">
-                    <img src="images/5.JPEG" alt="International food table display at festival">
+                    <img src="images/new3.jpeg" alt="International food table display at festival">
                     <div class="gallery-overlay">
                         <!-- <h4>Cultural Showcase</h4> -->
                         <!-- <p>Celebrating diversity through performances</p> -->
                     </div>
                 </div>
 
-                <div class="gallery-item scroll-animate" onclick="openLightbox(this)">
-                    <img src="images/4.jpg" alt="International food table display at festival">
-                    <div class="gallery-overlay">
-                        <!-- <h4>Startup Presentations</h4> -->
-                        <!-- <p>Entrepreneurs sharing their vision</p> -->
-                    </div>
-                </div>
-
-                <div class="gallery-item scroll-animate" onclick="openLightbox(this)">
-                    <img src="images/11.JPEG" alt="International food table display at festival">
-                    <div class="gallery-overlay">
-                        <!-- <h4>International Food Table</h4> -->
-                        <!-- <p>Diverse culinary experiences from around the world</p> -->
-                    </div>
-                </div>
-
-                <div class="gallery-item scroll-animate" onclick="openLightbox(this)">
-                    <img src="images/14.JPEG" alt="International food table display at festival">
-                    <div class="gallery-overlay">
-                        <!-- <h4>International Food Table</h4> -->
-                        <!-- <p>Diverse culinary experiences from around the world</p> -->
-                    </div>
-                </div>
-
-                <div class="gallery-item scroll-animate" onclick="openLightbox(this)">
-                    <img src="images/new1.jfif" alt="International food table display at festival">
-                    <div class="gallery-overlay">
-                        <!-- <h4>International Food Table</h4> -->
-                        <!-- <p>Diverse culinary experiences from around the world</p> -->
-                    </div>
-                </div>
-
-                <div class="gallery-item scroll-animate" onclick="openLightbox(this)">
-                    <img src="images/new2.webp" alt="International food table display at festival">
-                    <div class="gallery-overlay">
-                        <!-- <h4>International Food Table</h4> -->
-                        <!-- <p>Diverse culinary experiences from around the world</p> -->
-                    </div>
-                </div>
-
-                <div class="gallery-item scroll-animate" onclick="openLightbox(this)">
-                    <img src="images/new3.jpeg" alt="International food table display at festival">
-                    <div class="gallery-overlay">
-                        <!-- <h4>Team Building Activities</h4> -->
-                        <!-- <p>Collaborative experiences and fun</p> -->
-                    </div>
-                </div>
 
             </div>
         </div>
@@ -1876,7 +1799,7 @@
                     <h3>Food Share</h3>
                     <div class="price">€17.50</div>
                     <div class="pricing-details">
-                        July 1st - July 8th<br>
+                        July 1st - 7th<br>
                         Bring dishes or dessert
                     </div>
                 </div>
@@ -1886,7 +1809,7 @@
                     <h3>Just Come</h3>
                     <div class="price">€25.50</div>
                     <div class="pricing-details">
-                        July 1st - July 8th<br>
+                        July 1st - 7th<br>
                         No food contribution
                     </div>
                 </div>
@@ -1907,10 +1830,11 @@
                 <p>WhatsApp: <a href="tel:+31613317858">+31 6 1331 7858</a></p>
                 <p>Linkedin: <a href="#">qiangbin-li</a></p>
             </div>
-            
+
             <div id="register" style="margin-top: 3rem;">
-                <a href="https://forms.gle/kxJuKJ2tDcjbdWFf6" class="cta-button" style="background: white; color: var(--dark);">
-                 Register for 11 July
+                <a href="https://forms.gle/kxJuKJ2tDcjbdWFf6" class="cta-button"
+                    style="background: white; color: var(--dark);">
+                    Register for 11 July
                 </a>
             </div>
         </div>
