@@ -628,10 +628,14 @@
             margin: 0;
         }
 
-        .cta-section {
-            text-align: center;
-            position: relative;
-        }
+.cta-section {
+    display: flex;
+    justify-content: center; /* horizontaal midden */
+    align-items: center;     /* verticaal midden */
+    text-align: center;
+    position: relative;
+    min-height: 120px;       /* nodig voor verticale centrering */
+}
 
         .cta-message {
             font-size: 1.5rem;
